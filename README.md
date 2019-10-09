@@ -79,3 +79,8 @@ An example input file, `input_01.json` is included in the repo's root folder.
 #### Running Tests
 
 Enter `githubcrawler/` and from there run the `spider_tests.py` script. Tests are run on both the spider initialization, and on the parsers (using stored html files included).
+
+
+##### Troubleshooting
+
+Please check the proxy list/try again if you have several proxies. 
