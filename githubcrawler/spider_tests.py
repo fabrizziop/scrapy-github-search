@@ -72,7 +72,7 @@ class TestParsers(unittest.TestCase):
 			"type": type_to_look
 		}
 		self.init_spider(keywords, proxies, type_to_look)
-		current_response = TextResponse(url=self.spider_to_test.get_main_url(), body=open("test_files/issues.html", "r").read(), encoding="utf-8")
+		current_response = TextResponse(url=self.spider_to_test.get_main_url(), body=open("test_files/issues.html", "r", encoding="utf-8").read(), encoding="utf-8")
 		results = self.spider_to_test.parse_main_search(current_response)
 		results_list = []
 		results_compare_list = [
@@ -101,7 +101,7 @@ class TestParsers(unittest.TestCase):
 			"type": type_to_look
 		}
 		self.init_spider(keywords, proxies, type_to_look)
-		current_response = TextResponse(url=self.spider_to_test.get_main_url(), body=open("test_files/wikis.html", "r").read(), encoding="utf-8")
+		current_response = TextResponse(url=self.spider_to_test.get_main_url(), body=open("test_files/wikis.html", "r", encoding="utf-8").read(), encoding="utf-8")
 		results = self.spider_to_test.parse_main_search(current_response)
 		results_list = []
 		results_compare_list = [
@@ -134,7 +134,7 @@ class TestParsers(unittest.TestCase):
 			"type": type_to_look
 		}
 		self.init_spider(keywords, proxies, type_to_look)
-		current_response = TextResponse(url=self.spider_to_test.get_main_url(), body=open("test_files/repositories.html", "r").read(), encoding="utf-8")
+		current_response = TextResponse(url=self.spider_to_test.get_main_url(), body=open("test_files/repositories.html", "r", encoding="utf-8").read(), encoding="utf-8")
 		results = self.spider_to_test.parse_main_search(current_response)
 		results_list = []
 		results_compare_list = [
@@ -159,7 +159,7 @@ class TestParsers(unittest.TestCase):
 			"type": type_to_look
 		}
 		self.init_spider(keywords, proxies, type_to_look)
-		current_response = TextResponse(url=self.spider_to_test.get_main_url(), body=open("test_files/individual_repository.html", "r").read(), encoding="utf-8")
+		current_response = TextResponse(url=self.spider_to_test.get_main_url(), body=open("test_files/individual_repository.html", "r", encoding="utf-8").read(), encoding="utf-8")
 		results = self.spider_to_test.parse_specific_repository(current_response)
 		results_list = []
 		results_compare_list = [

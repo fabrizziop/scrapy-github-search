@@ -16,7 +16,7 @@ class GithubSearchSpider(scrapy.Spider):
 			json_string = test_mode_json
 		else:
 			with open(self.jsoninput, "r") as json_file_to_read:
-				json_string = open(self.jsoninput, "r").read()
+				json_string = open(self.jsoninput, "r", encoding="utf-8").read()
 		json_data = json.loads(json_string)
 		print(json_data)
 		self.keywords = json_data["keywords"]
