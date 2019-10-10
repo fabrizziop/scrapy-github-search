@@ -24,7 +24,7 @@ class GithubSearchSpider(scrapy.Spider):
 		self.type_to_look = json_data["type"]
 	def select_proxy(self):
 		#randomly selecting a proxy
-		self.selected_proxy = "http://" + random.choice(self.proxies)
+		self.selected_proxy = f"http://{random.choice(self.proxies)}"
 		print("Selected Proxy:", self.selected_proxy)
 	def get_main_url(self):
 		#generating the search URL
